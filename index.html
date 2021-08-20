@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<head>
+    <title>foodsharing Aachen</title>
+    <link rel="stylesheet" type="text/css" href="/dist/style.css">
+    <!--Das Skript zeigt das aktuelle Datum an.-->
+    <script type="text/javascript">
+        function showDate() {
+          var d = new Date();
+          var curr_date = d.getDate();
+          var curr_month = d.getMonth() + 1; //months are zero based
+          var curr_year = d.getFullYear();
+          document.write(curr_date + "-" + curr_month + "-" + curr_year);
+        }
+      </script>
+</head>
+<body>
+    <h1>Lebensmittelretten</h1>
+    <!--An dieser Stelle wird das Datum dann angezeigt.-->
+    <script type="text/javascript">showDate();</script>
+    <!--br=break row, Zeilenumbruch-->
+    <br \>
+    <img width="400" src="/dist/fs.jpg"/>
+    <p>Rund zwölf Millionen Tonnen Lebensmittel werden in Deutschland jedes Jahr entlang der Lebensmittelversorgungskette als Abfall entsorgt. (Quelle: BMEL)</p>
+    
+     <!-- target="_blank" öffnet den Link in einem neuen Tab -->   
+     <a href="/about" target="_blank">Was tun wir?</a>
+    <h2>Einführungsabholungen</h2>
+    <p>Bevor du eigenständig bei unseren Kooperationsbetrieben abholen kannst, machst du noch 3 Einführungsabholungen mit erfahrenen Foodsaver:innen.</p>
+    <br />
+    <p>Für diese kannst du dich hier anmelden:</p>
+    <table>
+        <tr>
+            <td>Datum: 1.1.2022</td>
+            <td><a href="/buchung" target="_blank"><button> Anmelden</button></a></td>
+        </tr>
+        <tr>
+            <td>Datum: 1.2.2022</td>
+            <td><a href="/buchung" target="_blank"><button> Anmelden</button></a></td>
+        </tr>
+    </table>
+    <p>Wenn du alle 3 Einführungsabholungen erfolgreich erledigt hast, kannst du dich wieder bei mir melden.</p>
+    <p>Ich stelle dir dann deinen Foodsaver-Ausweis aus und schalte dich frei. Danach kannst du dich dann für reguläre Abholungen eintragen.</p>
+    <a href="https://www.bmel.de/DE/themen/ernaehrung/lebensmittelverschwendung/studie-lebensmittelabfaelle-deutschland.html" target="_blank">Hier gibt es noch mehr Infos zur Lebensmittelverschwendung in Deutschland</a><br />
+   <p></p>
+   
+    <br />
+    <!--Mit diesem Button wird man wieder an den Anfang der Seite geschoben.-->
+    <button id="scrollButton">Nach oben</button>
+    <br />
+   <!--Dieses Script schiebt alles wieder nach oben.-->
+   <script>
+       function scrollToTop(){
+           window.scrollTo({ top: 0, behavior: 'smooth' })
+       }
+       const myButton = document.getElementById("scrollButton");
+       myButton.addEventListener("click", scrollToTop)
+   </script>
+  
+</body>
+</html>
