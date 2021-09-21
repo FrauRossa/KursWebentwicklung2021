@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <head>
     <title>foodsharing Aachen</title>
+    <!--Die untere Zeile hier gehört zu Bulma-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
     <link rel="stylesheet" type="text/css" href="/dist/style.css">
-    <!--Das Skript zeigt das aktuelle Datum an.-->
+    <!--Das Skript erstellt das aktuelle Datum.-->
     <script type="text/javascript">
         function showDate() {
           var d = new Date();
@@ -14,16 +16,80 @@
       </script>
 </head>
 <body>
-    <h1>Lebensmittelretten</h1>
-    <!--An dieser Stelle wird das Datum dann angezeigt.-->
-    <script type="text/javascript">showDate();</script>
+    <!--Hier fängt der Bulmateil für die Navbar an-->
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+          <a class="navbar-item" href="https://foodsharing.de" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/1/16/Foodsharing-Logo_dunkel_Gabel.png" width="80" height="28">
+          </a>
+      
+          <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
+        </div>
+      
+        <div id="navbarBasicExample" class="navbar-menu">
+          <div class="navbar-start">
+            <a class="navbar-item" href="https://www.bmel.de/DE/themen/ernaehrung/lebensmittelverschwendung/studie-lebensmittelabfaelle-deutschland.html" target="_blank"> 
+              Lebensmittelverschwendung
+            </a>
+      
+            <div class="navbar-item has-dropdown is-hoverable">
+              <a class="navbar-link">
+                foodsharing Aachen
+              </a>
+      
+              <div class="navbar-dropdown">
+                <a class="navbar-item" href="/about" target="_blank">
+                  Wer sind wir?
+                </a>
+                <a class="navbar-item" href="/einfuehrungen" target="_blank"> 
+                  Einführungsabholungen
+                </a>
+              </div>
+            </div>
+          </div>
+      
+          <div class="navbar-end">
+            <div class="navbar-item">
+            </div>
+          </div>
+        </div>
+      </nav>
+      <!--Bis hier geht der Bulmateil für die Navbar-->
+    <div class="content has-text-centered">
+        <p>
+          <strong>Lebensmittelretten</strong>
+        </p>
+    </div>
     <!--br=break row, Zeilenumbruch-->
     <br \>
-    <img width="400" src="/dist/fs.jpg"/>
-    <p>Rund zwölf Millionen Tonnen Lebensmittel werden in Deutschland jedes Jahr entlang der Lebensmittelversorgungskette als Abfall entsorgt. (Quelle: BMEL)</p>
+    <div class="content has-text-centered">
+        <p>
+            <img width="500" src="/dist/fs.jpg"/>
+        </p>
+    </div>
     
+    <p>Rund zwölf Millionen Tonnen Lebensmittel werden in Deutschland jedes Jahr entlang der Lebensmittelversorgungskette als Abfall entsorgt. (Quelle: BMEL)</p>
+    <p>Davon landet ein großer Teil in Mülleimern von Privathaushalten.</p>
+    <br />
+    <p>Wir versuchen, Lebensmittel vor der Tonne zu retten und durch Aufklärungsarbeit für ein Umdenken zu sorgen.</p>
      <!-- target="_blank" öffnet den Link in einem neuen Tab -->   
-     <a href="/about" target="_blank">Was tun wir?</a>
+     <!--Die Zeile war vorher auf der Startseite und ist jetzt in der Navbar
+         <a href="/about" target="_blank">Was tun wir?</a>-->
+    <br />  
+    <p>Auf dieser Seite möchten wir unsere Initiative vorstellen und dir zeigen, wie du dich bei uns einbringen kannst :)</p>
+    <br />
+    <p>Folgende Themen erklären wir hier:</p>
+    <ul>
+            <li>&bull; Wer sind wir?</li>
+            <li>&bull; Wie kannst du bei uns mitmachen?</li>
+            <li>&bull; Wo kannst du dich über Lebensmittelverschwendung noch informieren?</li>
+    </ul>
+           
+    <!-- Der Abschnitt ist jetzt ebenfalls im Dropdownmenü der Navbar
     <h2>Einführungsabholungen</h2>
     <p>Bevor du eigenständig bei unseren Kooperationsbetrieben abholen kannst, machst du noch 3 Einführungsabholungen mit erfahrenen Foodsaver:innen.</p>
     <br />
@@ -40,8 +106,12 @@
     </table>
     <p>Wenn du alle 3 Einführungsabholungen erfolgreich erledigt hast, kannst du dich wieder bei mir melden.</p>
     <p>Ich stelle dir dann deinen Foodsaver-Ausweis aus und schalte dich frei. Danach kannst du dich dann für reguläre Abholungen eintragen.</p>
+    -->
+    
+    <!--Hier war vorher der Link nach bmel.de. Dieser ist jetzt oben in der Navbar
     <a href="https://www.bmel.de/DE/themen/ernaehrung/lebensmittelverschwendung/studie-lebensmittelabfaelle-deutschland.html" target="_blank">Hier gibt es noch mehr Infos zur Lebensmittelverschwendung in Deutschland</a><br />
-   <p></p>
+    -->
+    <p></p>
    
     <br />
     <!--Mit diesem Button wird man wieder an den Anfang der Seite geschoben.-->
@@ -55,6 +125,18 @@
        const myButton = document.getElementById("scrollButton");
        myButton.addEventListener("click", scrollToTop)
    </script>
-  
+   <!--Hier fängt der Footer an-->
+  <footer class="footer">
+    <div class="content has-text-centered">
+      <p>
+        <strong>foodsharing</strong> by <a href="https://foodsharing.de/?page=content&sub=contact">FrauRossa</a>. 
+        <!--An dieser Stelle wird das Datum dann angezeigt.-->
+        <script 
+          type="text/javascript">showDate();
+        </script>
+      </p>
+    </div>
+  </footer>
+  <!--Bis hier geht der Footer-->
 </body>
 </html>
